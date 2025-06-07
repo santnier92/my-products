@@ -1,19 +1,12 @@
 <mat-toolbar color="primary">
   <span> {{ title }} </span>
   <span class="spacer"></span>
-  <button mat-stroked-button (click)="page = 0;">
+  <button mat-stroked-button routerLink="products">
     Productos
   </button>
-  <button mat-stroked-button (click)="page = 1;">
+  <button mat-stroked-button routerLink="products/new">
     Nuevo
   </button>
 </mat-toolbar>
-
-<!-- Verifique si la variable controlador y muestra de componentes 0 y 1-->
-@if (page === 0) {
-<app-product-list />
-}@else if (page === 1) {
-<app-product-form />
-}
 
 <router-outlet />
